@@ -1,0 +1,250 @@
+/* Global Header Styles */
+.header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+  }
+  
+  /* Logo Styles */
+  .logo-section {
+    flex-shrink: 0;
+  }
+  
+  .logo {
+    height: 2.5rem;
+    width: auto;
+  }
+  
+  /* Search Section Styles */
+  .search-section {
+    flex-grow: 1;
+    margin: 0 1rem;
+    position: relative;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 9999px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .search-input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+  }
+  
+  .search-button {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Desktop Navigation Styles */
+  .desktop-navigation {
+    display: none;
+  }
+  
+  @media (min-width: 768px) {
+    .desktop-navigation {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+  
+  /* Categories Dropdown */
+  .categories-dropdown {
+    position: relative;
+  }
+  
+  .categories-button {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+  }
+  
+  .categories-button:hover {
+    background-color: #f3f4f6;
+  }
+  
+  .dropdown-icon {
+    margin-left: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  .categories-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 220px;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.375rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    margin-top: 0.5rem;
+  }
+  
+  .category-item {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .category-item:hover {
+    background-color: #f3f4f6;
+  }
+  
+  /* Profile Section */
+  .profile-section {
+    position: relative;
+  }
+  
+  .profile-image {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 9999px;
+    cursor: pointer;
+    object-fit: cover;
+  }
+  
+  .profile-dropdown {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 220px;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.375rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    margin-top: 0.5rem;
+  }
+  
+  .dropdown-item {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f3f4f6;
+  }
+  
+  /* Mobile Navigation Styles */
+  .mobile-menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  @media (min-width: 768px) {
+    .mobile-menu-toggle {
+      display: none;
+    }
+  }
+  
+  .mobile-navigation {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mobile-nav-content {
+    padding: 1rem;
+  }
+  
+  .mobile-categories-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.375rem;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .mobile-categories-list {
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+  }
+  
+  .mobile-category-item {
+    padding: 0.5rem 0;
+    cursor: pointer;
+  }
+  
+  .mobile-menu-items {
+    margin-top: 1rem;
+  }
+  
+  .mobile-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e0e0e0;
+    cursor: pointer;
+  }
+  
+  .mobile-profile-image {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 9999px;
+    object-fit: cover;
+  }
+  
+  .mobile-profile-dropdown {
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+  }
+  
+  .mobile-dropdown-item {
+    padding: 0.5rem 0;
+    cursor: pointer;
+  }
+  
+  /* Icon Styles */
+  .icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+  
+  .icon, .mobile-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #6b7280;
+    transition: color 0.3s ease;
+  }
+  
+  .icon-button:hover .icon {
+    color: #1f2937;
+  }

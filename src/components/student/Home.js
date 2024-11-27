@@ -1,10 +1,57 @@
 import React from "react";
+import Header from "./Header";
+import Footer from "./Footer";
+import "./home.css";
 
-const Home = () => {
+const Home = ({ userName = "Student", recentlyViewed = [], mostPopular = [] }) => {
   return (
-    <div>
-      <h1>Welcome, Abc!</h1>
-      <p>This is your home page.</p>
+    <div className="home">
+      {/* Header Section */}
+      <Header />
+
+      {/* Main Content */}
+      <main className="home-main">
+        <div className="main-title">
+          <h2>Home</h2>
+          <button>My Courses</button>
+        </div>
+        <div className="featured-section">
+          <div className="featured-image">
+            <img
+              src="./featured-placeholder.jpg"
+              alt="Featured Course"
+              className="featured-image"
+            />
+          </div>
+        </div>
+
+        <div className="recently-viewed">
+          <h3>Recently Viewed</h3>
+          <div className="course-grid">
+            {recentlyViewed.map((course, index) => (
+              <div className="course-card" key={index}>
+                <img src={course.image} alt={course.title} />
+                <p>{course.title}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="most-popular">
+          <h3>Most Popular</h3>
+          <div className="course-grid">
+            {mostPopular.map((course, index) => (
+              <div className="course-card" key={index}>
+                <img src={course.image} alt={course.title} />
+                <p>{course.title}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </main>
+
+      {/* Footer Section */}
+      <Footer />
     </div>
   );
 };
