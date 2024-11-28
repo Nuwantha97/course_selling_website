@@ -5,6 +5,7 @@ import Login from './components/Login';
 import Register from './components/Register';
 import Home from './components/student/Home'; // Import the new Home component
 import './App.css';
+import { AuthProvider } from './context/AuthContext';
 
 const App = () => {
   const [showLoginModal, setShowLoginModal] = useState(false);
@@ -18,42 +19,44 @@ const App = () => {
     }, 2000);
   };
 
-  return (
-    <Router>
-      <div className="App">
-        {/* Display Popup Message */}
-        {popupMessage && <div className="popup">{popupMessage}</div>}
+      return (
+        <AuthProvider>
+          <Router>
+            <div className="App">
+              {/* Display Popup Message */}
+              {popupMessage && <div className="popup">{popupMessage}</div>}
 
-        {/* Routes for Dashboard and Home */}
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <Dashboard
-                onShowLogin={() => setShowLoginModal(true)}
-                onShowRegister={() => setShowRegisterModal(true)}
-              />
-            }
-          />
-          <Route path="/home" element={<Home />} />
-        </Routes>
+              {/* Routes for Dashboard and Home */}
+              <Routes>
+                <Route
+                  path="/"
+                  element={
+                    <Dashboard
+                      onShowLogin={() => setShowLoginModal(true)}
+                      onShowRegister={() => setShowRegisterModal(true)}
+                    />
+                  }
+                />
+                <Route path="/home" element={<Home />} />
+              </Routes>
 
-        {/* Modals for Login and Register */}
-        {showLoginModal && (
-          <div className="overlay">
-            <Login
-              onClose={() => setShowLoginModal(false)}
-              onLoginSuccess={handleLoginSuccess}
-            />
-          </div>
-        )}
-        {showRegisterModal && (
-          <div className="overlay">
-            <Register onClose={() => setShowRegisterModal(false)} />
-          </div>
-        )}
-      </div>
-    </Router>
+              {/* Modals for Login and Register */}
+              {showLoginModal && (
+                <div className="overlay">
+                  <Login
+                    onClose={() => setShowLoginModal(false)}
+                    onLoginSuccess={handleLoginSuccess}
+                  />
+                </div>
+              )}
+              {showRegisterModal && (
+                <div className="overlay">
+                  <Register onClose={() => setShowRegisterModal(false)} />
+                </div>
+              )}
+            </div>
+          </Router>
+        </AuthProvider>
   );
 };
 

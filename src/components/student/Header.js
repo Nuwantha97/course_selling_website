@@ -1,12 +1,14 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Menu, Bell, ShoppingCart, ChevronDown } from 'lucide-react';
 import './Header.css';
+import { useAuth } from '../../context/AuthContext';
 
 const Header = () => {
   // State management for different dropdown and mobile menu interactions
   const [isProfileDropdownOpen, setProfileDropdownOpen] = useState(false);
   const [isCategoriesDropdownOpen, setCategoriesDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { user } = useAuth();
 
   // Refs to manage dropdown click-outside behavior
   const profileDropdownRef = useRef(null);
@@ -53,30 +55,24 @@ const Header = () => {
     'Design', 'Marketing', 'Personal Development'
   ];
 
+  // Function to get first letter of email (or default profile initial)
+  const getProfileInitial = () => {
+    if (!user.email) return 'U'; // Default to 'U' for User if no email
+    return user.email.charAt(0).toUpperCase();
+  };
+
   return (
     <header className="header">
       <div className="header-container">
-        {/* Logo Section */}
-        <div className="logo-section">
+        {/* Logo and Categories Section */}
+        <div className="logo-categories-section">
+          {/* Logo */}
           <img 
             src="./logo1.webp" 
             alt="Logo" 
             className="logo"
           />
-        </div>
 
-        {/* Search Bar */}
-        <div className="search-section">
-          <input 
-            type="text" 
-            placeholder="Search courses..." 
-            className="search-input"
-          />
-          <button className="search-button">🔍</button>
-        </div>
-
-        {/* Desktop Navigation */}
-        <nav className="desktop-navigation">
           {/* Categories Dropdown */}
           <div 
             ref={categoriesDropdownRef} 
@@ -100,7 +96,20 @@ const Header = () => {
               </div>
             )}
           </div>
+        </div>
 
+        {/* Search Bar */}
+        <div className="search-section">
+          <input 
+            type="text" 
+            placeholder="Search courses..." 
+            className="search-input"
+          />
+          <button className="search-button">🔍</button>
+        </div>
+
+        {/* Desktop Navigation */}
+        <nav className="desktop-navigation">
           {/* Icons */}
           <button className="icon-button">
             <ShoppingCart className="icon" />
@@ -114,12 +123,12 @@ const Header = () => {
             ref={profileDropdownRef} 
             className="profile-section"
           >
-            <img 
-              src="./profile-photo.jpg"
-              alt="Profile" 
-              className="profile-image"
+            <div 
+              className="profile-initial"
               onClick={toggleProfileDropdown}
-            />
+            >
+              {getProfileInitial()}
+            </div>
             {isProfileDropdownOpen && (
               <div className="profile-dropdown">
                 <ul>
@@ -191,11 +200,9 @@ const Header = () => {
                 className="mobile-menu-item"
                 onClick={toggleProfileDropdown}
               >
-                <img 
-                  src="./profile-photo.jpg" 
-                  alt="Profile" 
-                  className="mobile-profile-image"
-                />
+                <div className="mobile-profile-initial">
+                  {getProfileInitial()}
+                </div>
                 <span>Profile</span>
               </li>
               {isProfileDropdownOpen && (
