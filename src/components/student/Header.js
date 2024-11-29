@@ -3,7 +3,7 @@ import { Menu, Bell, ShoppingCart, ChevronDown } from 'lucide-react';
 import './Header.css';
 import { useAuth } from '../../context/AuthContext';
 
-const Header = () => {
+const Header = ({ onCategorySelect = () => {} }) => {
   // State management for different dropdown and mobile menu interactions
   const [isProfileDropdownOpen, setProfileDropdownOpen] = useState(false);
   const [isCategoriesDropdownOpen, setCategoriesDropdownOpen] = useState(false);
@@ -57,7 +57,7 @@ const Header = () => {
 
   // Function to get first letter of email (or default profile initial)
   const getProfileInitial = () => {
-    if (!user.email) return 'U'; // Default to 'U' for User if no email
+    if (!user || !user.email) return 'U'; // Default to 'U' for User if no email
     return user.email.charAt(0).toUpperCase();
   };
 
@@ -89,6 +89,10 @@ const Header = () => {
                   <div 
                     key={index} 
                     className="category-item"
+                    onClick={() => {
+                      onCategorySelect(category); // Add category selection
+                      setCategoriesDropdownOpen(false); // Close dropdown after selection
+                    }}
                   >
                     {category}
                   </div>
@@ -178,6 +182,11 @@ const Header = () => {
                     <li 
                       key={index} 
                       className="mobile-category-item"
+                      onClick={() => {
+                        onCategorySelect(category); // Add category selection
+                        setCategoriesDropdownOpen(false); // Close dropdown after selection
+                        setMobileMenuOpen(false); // Close mobile menu
+                      }}
                     >
                       {category}
                     </li>

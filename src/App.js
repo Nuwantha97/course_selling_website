@@ -6,11 +6,13 @@ import Register from './components/Register';
 import Home from './components/student/Home'; // Import the new Home component
 import './App.css';
 import { AuthProvider } from './context/AuthContext';
+import Header from './components/student/Header';
 
 const App = () => {
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [showRegisterModal, setShowRegisterModal] = useState(false);
   const [popupMessage, setPopupMessage] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState(null);
 
   const handleLoginSuccess = (username) => {
     setPopupMessage(`Login as "${username}"`);
@@ -55,6 +57,15 @@ const App = () => {
                 </div>
               )}
             </div>
+            <div>
+              <Header 
+                onCategorySelect={(category) => setSelectedCategory(category)} 
+              />
+              <Home 
+                selectedCategory={selectedCategory} 
+                onCategorySelect={setSelectedCategory} 
+              />
+          </div>
           </Router>
         </AuthProvider>
   );
