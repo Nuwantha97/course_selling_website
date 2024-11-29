@@ -215,3 +215,8 @@
   background-color: #f8f9fa;
   border-top: 1px solid #ddd;
 }
+
+#categories {
+  padding: 5px;
+  font-size: 16px;
+}

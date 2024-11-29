@@ -11,7 +11,13 @@ const Dashboard = ({ onShowLogin, onShowRegister }) => {
           <div className="logo">
             <img src="./logo1.webp" alt="Courses Logo" />
           </div>
-          <button className="categories-btn">Categories</button>
+          <label for="categories"  className="categories-btn">Categories v</label>
+          <select id="categories" className="categories-btn" name="categories">
+            <option value="web">Web Development</option>
+            <option value="data">Data Science</option>
+            <option value="ai">Artificial Intelligence</option>
+            <option value="cloud">Cloud Computing</option>
+          </select>
         </div>
         <div className="search-bar">
           <input type="text" placeholder="Search courses..." />
