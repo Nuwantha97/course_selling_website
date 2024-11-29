@@ -1,40 +1,13 @@
 import React from "react";
-import "./home.css"; // Styling file
+import Header from "./Header";
+import Footer from "./Footer";
+import "./home.css"; // Styling file for Home component
 
 const Home = ({ userName = "Student", recentlyViewed = [], mostPopular = [] }) => {
   return (
     <div className="home">
       {/* Header Section */}
-      <header className="home-header">
-        <div className="logo-search">
-          <div className="logo">
-            <img src="./logo1.webp" alt="Logo" />
-          </div>
-          <div className="search-bar">
-            <input type="text" placeholder="Search courses..." />
-            <button>Search</button>
-          </div>
-        </div>
-        <div className="categories-student">
-          <button>Categories</button>
-          <span>{userName}</span>
-        </div>
-      </header>
-
-      {/* Sidebar */}
-      <aside className="profile-sidebar">
-        <h3>Profile</h3>
-        <ul>
-          <li>My Courses</li>
-          <li>Cart</li>
-          <li>Instructor</li>
-          <li>Notifications</li>
-          <li>Settings</li>
-          <li>Payment</li>
-          <li>Help</li>
-          <li>Logout</li>
-        </ul>
-      </aside>
+      <Header userName={userName} />
 
       {/* Main Content */}
       <main className="home-main">
@@ -76,9 +49,7 @@ const Home = ({ userName = "Student", recentlyViewed = [], mostPopular = [] }) =
       </main>
 
       {/* Footer Section */}
-      <footer className="home-footer">
-        <p>&copy; 2024 Online Course Platform. All Rights Reserved.</p>
-      </footer>
+      <Footer />
     </div>
   );
 };
