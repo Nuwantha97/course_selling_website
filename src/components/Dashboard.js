@@ -10,6 +10,9 @@ const Dashboard = () => {
         <div className="navbar-logo">
           <h2>Course Website</h2>
         </div>
+        <div className="search-bar">
+        <input type="text" placeholder="Search any course" />
+        </div>
         <div className="navbar-buttons">
           <button>Log in</button>
           <button>Sign up</button>
