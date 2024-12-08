@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from './Footer';
-import '../styles/Dashboard.css';
+import './Dashboard.css';
 
 const Dashboard = () => {
   return (
