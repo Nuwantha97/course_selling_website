@@ -1,28 +1,47 @@
-/* Navigation Bar */
-.navbar {
-  padding: 10px 20px;
-  border-bottom: 1px solid #ccc;
+/*Header section*/
+nav.navbar {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.search-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  width: 100%; /* Or a specific width if desired */
 }
 
-.navbar-buttons button {
-  margin-right: 10px;
+.d-flex {
+  width: 55%;
 }
 
-/* Search Bar */
-.search-bar {
-  padding: 20px;
-  background-color: #f9f9f9;
-  text-align: center;
+a.navbar-brand img {
+  width: 50px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 50%;
+  border: 2px solid gray;
 }
 
-.search-bar input {
-  padding: 10px;
-  width: 60%;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+.btn.btn-outline-success{
+  margin: 0px 10px 0px 10px;
+  font-weight: bold;
+  width: 7rem;
 }
+
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+      max-width: 95% !important;
+  }
+
+  .btn-outline-success {
+    --bs-btn-color: #2c2c2c !important;
+    --bs-btn-border-color: #2c2c2c !important;
+    --bs-btn-hover-bg: #2c2c2c !important;
+    --bs-btn-hover-border-color: #2c2c2c !important;
+    --bs-btn-active-bg: #2c2c2c !important;
+    --bs-btn-active-border-color: #2c2c2c !important;
+    --bs-btn-disabled-color: #2c2c2c !important;
+    --bs-btn-disabled-border-color: #2c2c2c !important;
+}
+/*body*/
+
 
 /* Courses Section */
 .courses-section {
