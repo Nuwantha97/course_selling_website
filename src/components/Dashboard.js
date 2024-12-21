@@ -130,12 +130,32 @@ const Dashboard = () => {
       </div>
 
       {/* Promo Section */}
-      <div className="promo-section">
-        <h3>Quality Education for Everyone, Without Barriers.</h3>
-        <p>Start Today!</p>
-        <button>Log in</button>
-        <button>Sign up</button>
-      </div>
+      <div className="flex flex-col md:flex-row w-full bg-gray-50 min-h-[400px]">
+        {/* Left side - Content */}
+        <div className="flex-1 flex flex-col justify-center items-center p-8 space-y-6">
+          <h3 className="text-3xl font-bold text-center">
+            Quality Education for Everyone, Without Barriers.
+          </h3>
+          <p className="text-xl text-gray-600">Start Today!</p>
+          <div className="flex gap-4">
+            <button className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+              Log in
+            </button>
+            <button className="px-6 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors">
+              Sign up
+            </button>
+          </div>
+        </div>
+        
+          {/* Right side - Image */}
+          <div className="flex-1">
+            <img 
+              src="/photos/dash2.jpg"
+              alt="Education Promo" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
 
       {/* Footer */}
       <Footer />
