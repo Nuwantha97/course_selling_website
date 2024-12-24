@@ -1,4 +1,5 @@
 import Header from "./Header";
+import SecondHeader from "./SecondHeader";
 import CourseCard from '../CourseCard';
 import Footer from '../Footer';
 import "./home.css";
@@ -60,6 +61,7 @@ const Home = () => {
     return (
         <div>
             <Header />
+            <SecondHeader/>
             <br/>
             <h3>Welcome Nuwantha!</h3>
             <br/>

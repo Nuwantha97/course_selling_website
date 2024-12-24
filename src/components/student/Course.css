@@ -1,0 +1,146 @@
+
+  .course-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1a1a1a;
+    color: white;
+    padding: 40px;
+    margin-bottom: 30px;
+  }
+  
+  .header-content {
+    flex: 1;
+  }
+  
+  .header-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .header-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .course-body {
+    display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .main-content {
+    flex: 2;
+  }
+  
+  .course-sidebar {
+    flex: 1;
+  }
+  
+  .what-youll-learn {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+  }
+  
+  .what-youll-learn ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .what-youll-learn li {
+    margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
+  }
+  
+  .what-youll-learn li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #4CAF50;
+  }
+  
+  .sections-list {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .section-item {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+  }
+  
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .icon {
+    transition: transform 0.3s ease;
+  }
+  
+  .icon.rotate {
+    transform: rotate(180deg);
+  }
+  
+  .course-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f8f9fa;
+  }
+  
+  .btn-primary {
+    width: 100%;
+    padding: 10px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  .btn-secondary {
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    color: #0056b3;
+    border: 1px solid #0056b3;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .instructor-info {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .instructor-profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .instructor-image {
+    border-radius: 50%;
+  }
+  
+  @media (max-width: 768px) {
+    .course-header {
+      flex-direction: column;
+    }
+    
+    .course-body {
+      flex-direction: column;
+    }
+    
+  }

@@ -120,21 +120,6 @@ const Header = () => {
         </Navbar.Collapse>
       </Container>
     </Navbar>
-
-      <ul class="nav nav-underline">
-        <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">My Learning</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Notification</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">About Us</a>
-        </li>
-        </ul>
     </header>
   );
 };
