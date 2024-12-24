@@ -150,7 +150,7 @@ const Dashboard = () => {
           {/* Right side - Image */}
           <div className="flex-1">
             <img 
-              src="/photos/dash2.jpg"
+              src="/photos/ai course.jpg"
               alt="Education Promo" 
               className="w-full h-full object-cover"
             />

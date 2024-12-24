@@ -1,0 +1,111 @@
+/*First header*/
+nav.navbar {
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .search-container {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Or a specific width if desired */
+  }
+  
+  .d-flex {
+    width: 55%;
+  }
+  
+  a.navbar-brand img {
+    width: 50px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%;
+    border: 2px solid gray;
+  }
+  
+  .btn.btn-outline-success{
+    margin: 0px 10px 0px 10px;
+    font-weight: bold;
+    width: 7rem;
+  }
+  
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 95% !important;
+    }
+  
+    .btn-outline-success {
+      --bs-btn-color: #2c2c2c !important;
+      --bs-btn-border-color: #2c2c2c !important;
+      --bs-btn-hover-bg: #2c2c2c !important;
+      --bs-btn-hover-border-color: #2c2c2c !important;
+      --bs-btn-active-bg: #2c2c2c !important;
+      --bs-btn-active-border-color: #2c2c2c !important;
+      --bs-btn-disabled-color: #2c2c2c !important;
+      --bs-btn-disabled-border-color: #2c2c2c !important;
+  }
+
+/*Second header */
+.nav {
+    display: flex; /* Makes the list items align horizontally */
+    justify-content: center; /* Centers the items horizontally */
+    background-color: #f8f9fa; /* Light background color */
+    padding: 10px 0; /* Adds vertical padding */
+    border-bottom: 1px solid #dee2e6; /* Optional: adds a subtle border at the bottom */
+    margin: 0; /* Removes default margin */
+  }
+  
+  /* Style the navigation items */
+  .nav-item {
+    list-style: none; /* Removes bullet points */
+    margin: 0 15px; /* Adds space between items */
+  }
+  
+  /* Style the navigation links */
+  .nav-link {
+    color: #495057; /* Neutral text color */
+    text-decoration: none; /* Removes the underline from links */
+    font-size: 16px; /* Adjust font size */
+    font-weight: 500; /* Slightly bold for better readability */
+    padding: 8px 12px; /* Adds padding around links */
+    border-radius: 4px; /* Slightly rounds the edges */
+    transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
+  }
+  
+  /* Active link styling */
+  .nav-link.active {
+    background-color: #e9ecef; /* Blue background for active link */
+    color: #ffffff; /* White text for active link */
+  }
+
+
+  
+  /* Hover effects */
+  .nav-link:hover {
+    background-color: #e9ecef; /* Light gray background */
+    
+  }
+  
+  ul.nav.nav-underline li a {
+    color: #2c2c2c; /* Blue color */
+    font-weight: 600;
+    text-decoration: none; /* Remove any existing underline */
+  }
+
+  li.nav-item {
+    margin: 0 3%;
+}
+  
+  ul.nav.nav-underline li a:hover,
+  ul.nav.nav-underline li a:focus {
+    text-decoration-color: blue;
+    color: blue; /* Change color to blue on hover/focus */
+  }
+  
+  ul.nav.nav-underline li a:active {
+    color: blue; /* Maintain blue color when active */
+  }
+  
+  ul.nav.nav-underline li.active a {
+    color: blue; /* Maintain blue color for the active link */
+  }
+  
+  a#profile-dropdown::after {
+    border: none; /* or border: 0; */
+  }
