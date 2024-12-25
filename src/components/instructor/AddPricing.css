@@ -1,0 +1,153 @@
+.pricing-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: #e0e0e0;
+    padding: 20px;
+  }
+  
+  .sidebar h2 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+  }
+  
+  .sidebar nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar nav li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar nav a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px;
+  }
+  
+  .sidebar nav a.active {
+    color: #0066cc;
+    font-weight: bold;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 30px;
+  }
+  
+  .main-content h1 {
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+  }
+  
+  .form-group {
+    margin-bottom: 25px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  
+  .price-inputs {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .currency-select {
+    width: 100px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .amount-input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: normal;
+  }
+  
+  .custom-time-inputs {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .time-input {
+    width: 100px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .time-unit-select {
+    width: 120px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .bank-select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .description-input {
+    width: 100%;
+    min-height: 100px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  .save-button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .save-button:hover {
+    background-color: #444;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .pricing-container {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      width: 100%;
+    }
+  
+    .price-inputs,
+    .custom-time-inputs {
+      flex-direction: column;
+    }
+  
+    .currency-select,
+    .time-unit-select {
+      width: 100%;
+    }
+  }

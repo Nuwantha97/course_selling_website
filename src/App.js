@@ -12,6 +12,8 @@ import InstructorHome from './components/instructor/InsHome';
 import CreateCourse from "./components/instructor/CreateCourse";
 import CreateCurriculum from "./components/instructor/CreateCurriculum";
 import AddContent from "./components/instructor/AddContent";
+import AddPricing from "./components/instructor/AddPricing";
+import Payment from "./components/instructor/Payment";
 
 
 
@@ -31,6 +33,8 @@ const App = () => {
         <Route path="/instructor/createcourse" element={<CreateCourse/>}/>
         <Route path="/instructor/createcurriculum" element={<CreateCurriculum/>}/>
         <Route path="/instructor/addcontent" element={<AddContent/>}/>
+        <Route path="/instructor/addpricing" element={<AddPricing/>}/>
+        <Route path="/instructor/payment" element={<Payment/>}/>
         <Route path="*" element={<div>Page Not Found</div>} />
       </Routes>
     </Router>
