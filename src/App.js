@@ -7,6 +7,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Cart from "./components/student/Cart";
 import ProfileSetting from "./components/student/profileSetting";
+import Notification from './components/Notification'
 
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/mylearning" element={<MyLearning/>}/>
         <Route path="/cart" element={<Cart/>}/>
         <Route path="/profilesetting" element={<ProfileSetting/>}/>
+        <Route path="/notification" element={<Notification/>}/>
         <Route path="*" element={<div>Page Not Found</div>} />
       </Routes>
     </Router>
