@@ -10,6 +10,8 @@ import ProfileSetting from "./components/student/profileSetting";
 import Notification from './components/Notification'
 import InstructorHome from './components/instructor/InsHome';
 import CreateCourse from "./components/instructor/CreateCourse";
+import CreateCurriculum from "./components/instructor/CreateCurriculum";
+import AddContent from "./components/instructor/AddContent";
 
 
 
@@ -27,6 +29,8 @@ const App = () => {
         <Route path="/notification" element={<Notification/>}/>
         <Route path="/instructor/home" element={<InstructorHome/>}/>
         <Route path="/instructor/createcourse" element={<CreateCourse/>}/>
+        <Route path="/instructor/createcurriculum" element={<CreateCurriculum/>}/>
+        <Route path="/instructor/addcontent" element={<AddContent/>}/>
         <Route path="*" element={<div>Page Not Found</div>} />
       </Routes>
     </Router>
